@@ -1,0 +1,28 @@
+title:            tanf
+description:      record dot
+url:              # Site url.
+baseurl:          # Base url. ( if use subdirectory-like URL )
+signoff:          tanf # Your name.
+disqus_shortname: tandalygithub # disqus comment thread for post header options. ( leave blank if unwanted. )
+google_analytics_id: # set tracking, UA-XXXX-Y.
+
+links:
+  - name:         Home
+    url:          http://tandaly.github.io
+  - name:         Feed
+    url:          /feed.xml
+  - name:         Thus.in
+    url:          http://thus.in
+    external:     true
+  - name:         Email
+    url:          mailto:tandaly001@gmail.com
+    external:     true
+  - name:         About me
+    url:          http://tandaly.github.com/about/
+    external:     true
+
+pygments:         true
+permalink:        pretty
+markdown:         redcarpet
+redcarpet:
+  extensions:     [autolink, tables]
