@@ -1,5 +1,5 @@
-title:            tanf
-description:      tanf 2014 to nanjing
+title:            Tanf站点～简约美
+description:      Tanf 2014 nanjing
 url:              # Site url.
 baseurl:          # Base url. ( if use subdirectory-like URL )
 signoff:          tanf # Your name.
@@ -7,14 +7,17 @@ disqus_shortname: tandalygithub # disqus comment thread for post header options.
 google_analytics_id: # set tracking, UA-XXXX-Y.
 
 links:
-  - name:         Home
+  - name:         首页
     url:          http://tandaly.github.io
+  - name:         谷歌IP库
+    url:          http://tandaly.github.io/test/ip.html
+    external:     true
   - name:         Feed
     url:          /feed.xml
   - name:         Email
     url:          mailto:tandaly001@gmail.com
     external:     true
-  - name:         About me
+  - name:         关于我
     url:          http://tandaly.github.com/about/
     external:     true
 
