@@ -11,9 +11,6 @@ links:
     url:          http://tandaly.github.io
   - name:         Feed
     url:          /feed.xml
-  - name:         Thus.in
-    url:          http://thus.in
-    external:     true
   - name:         Email
     url:          mailto:tandaly001@gmail.com
     external:     true
