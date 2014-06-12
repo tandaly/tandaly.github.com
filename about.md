@@ -20,10 +20,21 @@ disqus: true
 
 ---
  
-me:
+###ME
  
  ```json
-    {"name": "Tandaly", "sex": "male", "address":"NanJing"}
+    [{
+        "base":{
+            "Name": "Tanf", 
+            "Sex": "Male",
+            "Age": "24",
+            "Address":"NanJing"
+        },
+        "extra":{
+            "Nickname": "Tandaly",
+            "website": "http://tandaly.github.com"
+        }
+     }]
 ```
 
 ---

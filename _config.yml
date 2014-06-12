@@ -3,7 +3,7 @@ description:      当你的才华还撑不起你的野心时，你就应该静�
 url:              # Site url.
 baseurl:          http://tandaly.github.com
 year:               2014
-signoff:          tanf # Your name.
+signoff:          Tanf # Your name.
 disqus_shortname: tandalygithub # disqus comment thread for post header options. ( leave blank if unwanted. )
 google_analytics_id: # set tracking, UA-XXXX-Y.
 
