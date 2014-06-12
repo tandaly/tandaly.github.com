@@ -7,9 +7,12 @@ disqus_shortname: tandalygithub # disqus comment thread for post header options.
 google_analytics_id: # set tracking, UA-XXXX-Y.
 
 links:
-  - name:         首页
+  - name:         Blog
     url:          http://tandaly.github.io
-  - name:         谷歌IP库
+  - name:         Tools
+    url:          http://tools.dedecms.com/
+    external:     true
+  - name:         Google-ips
     url:          http://tandaly.github.io/test/ip.html
     external:     true
   - name:         Feed
@@ -18,7 +21,7 @@ links:
   - name:         Email
     url:          mailto:tandaly001@gmail.com
     external:     true
-  - name:         关于我
+  - name:         About me
     url:          http://tandaly.github.com/about/
     external:     true
 
