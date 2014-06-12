@@ -19,8 +19,8 @@ links:
   - name:         Feed
     url:          /feed.xml
     external:     true
-  - name:         Email
-    url:          mailto:tandaly001@gmail.com
+  - name:         Links
+    url:          /links
     external:     true
   - name:         About
     url:          /about
