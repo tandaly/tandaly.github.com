@@ -21,7 +21,6 @@ links:
     external:     true
   - name:         Links
     url:          /links
-    external:     true
   - name:         About
     url:          /about
 
