@@ -47,7 +47,7 @@ $ mkdir _layouts
 ```
 
 进入该目录，创建一个default.html文件，作为Blog的默认模板。并在该文件中填入以下内容。
-```
+```html
 <!DOCTYPE html>
 　　<html>
 　　<head>
@@ -78,8 +78,8 @@ $ mkdir _posts
 ```
 进入该目录，创建第一篇文章。文章就是普通的文本文件，文件名假定为2012-08-25-hello-world.html。(注意，文件名必须为"年-月-日-文章标题.后缀名"的格式。如果网页代码采用html格式，后缀名为html；如果采用[markdown](http://daringfireball.net/projects/markdown/)格式，后缀名为md。）
 在该文件中，填入以下内容：（注意，行首不能有空格）
-```
----
+```html
+        ---
 　　layout: default
 　　title: 你好，世界
 　　---
@@ -103,18 +103,18 @@ $ mkdir _posts
 #### 第五步，创建首页。
 有了文章以后，还需要有一个首页。
 回到根目录，创建一个index.html文件，填入以下内容。
-```
+```html
         ---
 　　layout: default
 　　title: 我的Blog
 　　---
-　　&lt;h2&gt;{{ page.title }}</h2>
-　　&lt;p>最新文章</p>
-　　&lt;ul>
+　　<h2>{{ page.title }}</h2>
+　　<p>最新文章</p>
+　　<ul>
 　　　　{% for post in site.posts %}
 　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　　　{% endfor %}
-　　&lt;/ul&gt;
+　　</ul>
 ```
 
 它的Yaml文件头表示，首页使用default模板，标题为"我的Blog"。然后，首页使用了 for post in site.posts ，表示对所有帖子进行一个遍历。这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于{{site.baseurl}}就是_config.yml中设置的baseurl变量。
