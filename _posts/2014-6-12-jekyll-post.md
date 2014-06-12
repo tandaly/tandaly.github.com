@@ -49,7 +49,7 @@ $ mkdir _layouts
 进入该目录，创建一个default.html文件，作为Blog的默认模板。并在该文件中填入以下内容。
 
 
-Jekyll使用[Liquid模板语](https://github.com/shopify/liquid/wiki/liquid-for-designers)言，{{ page.title }}表示文章标题，{{ content }}表示文章内容，更多模板变量请参考[官方文档](https://github.com/mojombo/jekyll/wiki/Template-Data)。
+Jekyll使用[Liquid模板语](https://github.com/shopify/liquid/wiki/liquid-for-designers)言，  page.title  表示文章标题，  content  表示文章内容，更多模板变量请参考[官方文档](https://github.com/mojombo/jekyll/wiki/Template-Data)。
 目录结构变成：
 ```
 /jekyll_demo
@@ -70,13 +70,13 @@ $ mkdir _posts
 　　layout: default
 　　title: 你好，世界
 　　---
-　　<h2>{{ page.title }}</h2>
+　　<h2>  page.title  </h2>
 　　<p>我的第一篇文章</p>
-　　<p>{{ page.date | date_to_string }}</p>
+　　<p>  page.date | date_to_string  </p>
 ```
 
 每篇文章的头部，必须有一个[yaml文件头](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter)，用来设置一些元数据。它用三根短划线"---"，标记开始和结束，里面每一行设置一种元数据。"layout:default"，表示该文章的模板使用_layouts目录下的default.html文件；"title: 你好，世界"，表示该文章的标题是"你好，世界"，如果不设置这个值，默认使用嵌入文件名的标题，即"hello world"。
-在yaml文件头后面，就是文章的正式内容，里面可以使用模板变量。{{ page.title }}就是文件头中设置的"你好，世界"，{{ page.date }}则是嵌入文件名的日期（也可以在文件头重新定义date变量），"| date_to_string"表示将page.date变量转化成人类可读的格式。
+在yaml文件头后面，就是文章的正式内容，里面可以使用模板变量。  page.title  就是文件头中设置的"你好，世界"，  page.date  则是嵌入文件名的日期（也可以在文件头重新定义date变量），"| date_to_string"表示将page.date变量转化成人类可读的格式。
 目录结构变成：
 ```
 /jekyll_demo
@@ -95,16 +95,16 @@ $ mkdir _posts
 　　layout: default
 　　title: 我的Blog
 　　---
-　　<h2>{{ page.title }}</h2>
+　　<h2>  page.title  </h2>
 　　<p>最新文章</p>
 　　<ul>
 　　　　{% for post in site.posts %}
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　　　<li>  post.date | date_to_string   <a href="  site.baseurl    post.url  ">  post.title  </a></li>
 　　　　{% endfor %}
 　　</ul>
 ```
 
-它的Yaml文件头表示，首页使用default模板，标题为"我的Blog"。然后，首页使用了{% for post in site.posts %}，表示对所有帖子进行一个遍历。这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于{{site.baseurl}}就是_config.yml中设置的baseurl变量。
+它的Yaml文件头表示，首页使用default模板，标题为"我的Blog"。然后，首页使用了{% for post in site.posts %}，表示对所有帖子进行一个遍历。这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于 site.baseurl 就是_config.yml中设置的baseurl变量。
 目录结构变成：
 ```
 /jekyll_demo
