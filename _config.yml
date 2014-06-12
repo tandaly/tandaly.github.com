@@ -1,4 +1,4 @@
-title:            tanf
+title:            Tanf
 description:      当你的才华还撑不起你的野心时，你就应该静下心来学习。
 url:              # Site url.
 baseurl:          http://tandaly.github.com
@@ -24,7 +24,6 @@ links:
     external:     true
   - name:         About
     url:          /about
-    external:     true
 
 pygments:         true
 permalink:        pretty

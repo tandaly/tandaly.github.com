@@ -1,17 +1,35 @@
 ---
-layout: page
+layout: about
 title: About
-disqus: false
+disqus: true
 ---
 
-## Create by Mu-An
+###关于我：
 
-Give people something to read and get to know you. Here's my attempt: this is [Mu-An](http://muan.co), a designer developer who lives in London at the moment.
+>* 一个典型的攻城师、码农，崇尚自由，喜欢关注新鲜事物
+>* 擅长B/S系统开发，使用技术、框架：Java及其SSM)架构、jQuery、html、Css
 
-Tweet at [@muanchiou](http://twitter.com/muanchiou), read my code on [GitHub](http://github.com/muan), see my designs on [Dribbble](http://dribbble.com/muan), find my CV on [LinkedIn](http://uk.linkedin.com/in/muanchiou).
+---
 
-This theme is made by me. You have a nice day. ♥
+###软硬环境
 
-## Modify by Rei
+>* 操作系统：window
+>* 编辑器：Sublime Text
+>* IDE：Eclipse
+>* 浏览器：Chrome
 
-http://chloerei.com
+---
+ 
+me:
+ 
+ ```json
+    {"name": "Tandaly", "sex": "male", "address":"NanJing"}
+```
+
+---
+
+--end
+
+
+    
+
