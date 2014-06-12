@@ -32,7 +32,7 @@ disqus: true
         },
         "extra":{
             "Nickname": "Tandaly",
-            "website": "http://tandaly.github.com"
+            "website": "[http://tandaly.github.com](http://tandaly.github.com)"
         }
      }]
 ```
