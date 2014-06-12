@@ -14,6 +14,7 @@ links:
     external:     true
   - name:         Feed
     url:          /feed.xml
+    external:     true
   - name:         Email
     url:          mailto:tandaly001@gmail.com
     external:     true
