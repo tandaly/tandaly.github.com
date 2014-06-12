@@ -47,20 +47,7 @@ $ mkdir _layouts
 ```
 
 进入该目录，创建一个default.html文件，作为Blog的默认模板。并在该文件中填入以下内容。
-```
-<!DOCTYPE html>
-　　<html>
-　　<head>
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-　　　　<title>{{ page.title }}</title>
-　　</head>
-　　<body>
 
-　　　　{{ content }}
-
-　　</body>
-　　</html>
-```
 
 Jekyll使用[Liquid模板语](https://github.com/shopify/liquid/wiki/liquid-for-designers)言，{{ page.title }}表示文章标题，{{ content }}表示文章内容，更多模板变量请参考[官方文档](https://github.com/mojombo/jekyll/wiki/Template-Data)。
 目录结构变成：
