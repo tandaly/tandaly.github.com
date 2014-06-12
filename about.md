@@ -4,7 +4,9 @@ title: About
 disqus: true
 ---
 
-###关于我：
+![screenshot]({{ site.baseurl }}/images/fav.png)
+
+###简介：
 
 >* 专注设计、品质、专注用户需求、追求卓越的理念、开拓新的世界!
 >* 擅长B/S系统开发，使用技术、框架：Java及其SSM)架构、jQuery、html、Css
