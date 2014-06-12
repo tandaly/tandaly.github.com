@@ -4,7 +4,7 @@ title: About
 disqus: true
 ---
 
-![screenshot]({{ site.baseurl }}/images/fav.png)
+![screenshot]({{ site.baseurl }}/images/me.png)
 
 ###简介：
 
