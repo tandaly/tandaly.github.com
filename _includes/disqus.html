@@ -42,10 +42,12 @@
           (document.getElementsByTagName('head')[0] 
            || document.getElementsByTagName('body')[0]).appendChild(ds);
         })();
-        setTimeout(function(){
-          $(".ds-social-links").css({"width":"100%"});
-          alert("ok");
-        },6000);
+        var dsTimer = setInterval(function(){
+          if($(".ds-social-links").length != 0){
+            $(".ds-social-links").css({"width":"100%"});
+            clearInterval(dsTimer);
+          }
+        },200);
         </script>
       <!-- 多说公共JS代码 end -->
 </div>
