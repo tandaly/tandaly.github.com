@@ -55,11 +55,11 @@ $ mkdir _layouts
 　　<html>
 　　<head>
 　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-　　　　<title>{{ page.title }}</title>
+　　　　<title>{ page.title }</title>
 　　</head>
 　　<body>
 
-　　　　{{ content }}
+　　　　{ content }
 
 　　</body>
 　　</html>
@@ -90,9 +90,9 @@ $ mkdir _posts
 　　layout: default
 　　title: 你好，世界
 　　---
-　　<h2>{{ page.title }}</h2>
+　　<h2>{ page.title }</h2>
 　　<p>我的第一篇文章</p>
-　　<p>{{ page.date | date_to_string }}</p>
+　　<p>{ page.date | date_to_string }</p>
 ```
 
 每篇文章的头部，必须有一个[yaml文件头](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter)，用来设置一些元数据。它用三根短划线"---"，标记开始和结束，里面每一行设置一种元数据。"layout:default"，表示该文章的模板使用_layouts目录下的default.html文件；"title: 你好，世界"，表示该文章的标题是"你好，世界"，如果不设置这个值，默认使用嵌入文件名的标题，即"hello world"。
@@ -113,7 +113,7 @@ $ mkdir _posts
 回到根目录，创建一个index.html文件，填入以下内容。
 
 ```html
-        ---
+     ---
 　　layout: default
 　　title: 我的Blog
 　　---
