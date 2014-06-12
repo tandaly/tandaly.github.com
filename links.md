@@ -17,6 +17,10 @@ disqus: true
 
 ---
 
+### 教程类
+
+[gitbook使用入门](http://gitbook-zh.wanqingwong.com)&nbsp; &nbsp;[swift中文教程](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/)&nbsp; &nbsp;
+
 ### 生活类
 
 [生活常识网](http://www.woygo.com)&nbsp; &nbsp; 
