@@ -5,6 +5,7 @@ disqus: true
 ---
 
 ![screenshot]({{ site.baseurl }}/images/me.png)
+Tanf，男，重庆人，现居南京。
 
 ###简介：
 
@@ -34,7 +35,9 @@ disqus: true
     },
     "extra":{
         "Nickname": "Tandaly",
-        "Website": "http://tandaly.github.com"
+        "Mail": "tandaly001@gmail.com",
+        "Website": "http://tandaly.github.com",
+        "Hometown": "ChongQing"
     }
 }]
 ```
