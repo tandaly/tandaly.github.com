@@ -8,7 +8,7 @@ Tanf
 ---
 
 ```json
-{"name": "tanaly", "sex": "男", "address":"nanjing"}
+{"name": "tandaly", "sex": " male", "address":"nanjing"}
 ```
 
 ---
