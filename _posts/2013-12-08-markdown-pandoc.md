@@ -4,6 +4,8 @@ title: Markdown+Pandoc 最佳写作拍档
 date: 2013-12-08 00:22
 ---
 
+[markdown](http://wowubuntu.com/markdown/)
+
 
 ###我们为什么写作？
 自从人们开始写作，写作便是记录、抒发、批判、反省的好工具。从石板上的刻印到笔墨纸砚，再到如今的信息时代。从静态的个人主页到托管博客，从个人博客到微博，从wordpress到jekyll。无数投入写作中的人们写作的目的大同，写作的方式越简单越好，这样才能让我们专注于写作而不是为其他格式所困扰。另外现在智能终端快速普及，文件格式的多平台使用也成为了写作的一大问题。
@@ -145,6 +147,8 @@ Markdown越来越流行，不是因为它复杂，而是因为它足够简单。
 英文文件转换状况良好，中文字体问题请参考[Pandoc 用命令行转换标记语言](http://www.openfoundry.org/tw/foss-programs/8814-pandoc-)
 
 Markdown与Pandoc的用法也就说到这了，无疑它们搭配起来会让写作变得更加简单专注，这也就是我们的初衷。另外在写作中多结合Git,将文档推到GitHub上会是很好的尝试。
+
+
 
 #####参考文档
 + [Markdown写作浅谈](http://www.yangzhiping.com/tech/r-markdown-knitr.html) , 阳志平
