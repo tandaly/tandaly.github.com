@@ -117,12 +117,12 @@ $ mkdir _posts
 　　layout: default
 　　title: 我的Blog
 　　---
-　　<h2>{{ page.title }}</h2>
+　　<h2>\{{ page.title \}}</h2>
 　　<p>最新文章</p>
 　　<ul>
-　　　　{% for post in site.posts %}
-　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-　　　　{% endfor %}
+　　　　\{% for post in site.posts \%}
+　　　　　　<li>\{{ post.date | date_to_string \}} <a href="\{{ site.baseurl \}}\{{ post.url \}}">\{{ post.title \}}</a></li>
+　　　　\{% endfor \%}
 　　</ul>
 ```
 
@@ -154,11 +154,11 @@ $ git remote add origin https://github.com/username/jekyll_demo.git
 　　$ git push origin gh-pages
 ```
 
-上传成功之后，等10分钟左右，访问http://username.github.com/jekyll_demo/就可以看到Blog已经生成了（将username换成你的用户名）。
+上传成功之后，等10分钟左右，访问[http://username.github.com/jekyll_demo/](http://username.github.com/jekyll_demo/) 就可以看到Blog已经生成了（将username换成你的用户名）。
 
 
 #### 第七步，绑定域名。
-如果你不想用http://username.github.com/jekyll_demo/这个域名，可以换成自己的域名。
+如果你不想用[http://username.github.com/jekyll_demo/](http://username.github.com/jekyll_demo/) 这个域名，可以换成自己的域名。
 具体方法是在repo的根目录下面，新建一个名为CNAME的文本文件，里面写入你要绑定的域名，比如example.com或者xxx.example.com。
 如果绑定的是顶级域名，则DNS要新建一条A记录，指向204.232.175.78。如果绑定的是二级域名，则DNS要新建一条CNAME记录，指向username.github.com（请将username换成你的用户名）。此外，别忘了将_config.yml文件中的baseurl改成根目录"/"。
 至此，最简单的Blog就算搭建完成了。进一步的完善，请参考Jekyll创始人的[示例库](https://github.com/mojombo/tpw)，以及其他用Jekyll搭建的[blog](https://github.com/mojombo/jekyll/wiki/Sites)。
