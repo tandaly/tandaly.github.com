@@ -11,16 +11,20 @@ Tanf，男，重庆人，现居南京。
 ###简介：
 
 >* 专注设计、品质、专注用户需求、追求卓越的理念、开拓新的世界!
->* 擅长B/S系统开发，使用技术、框架：Java及其SSM)架构、jQuery、html、Css
+>* 擅长B/S系统开发
+>* 编程语言：JAVA C E PYTHON ANDROID 
+>* 前端：HTML JAVASCRIPT CSS JQUERY 
+>* 后端：SPRING SPRINGMVC STRUTS2 MYBATIS NUTZ 
+>* 数据库：MYSQL ORACLE SQLSERVER SQLITE MONGODB
 
 ---
 
 ###软硬环境
 
->* 操作系统：window
->* 编辑器：Sublime Text
+>* 操作系统：windows 2003 XP 7 8、Ubuntu14.04
+>* 编辑器：Sublime Text3、MarkdownPad2
 >* IDE：Eclipse
->* 浏览器：Chrome
+>* 浏览器：Chrome、项目需要用IE测试
 
 ---
  
