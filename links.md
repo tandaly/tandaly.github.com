@@ -7,8 +7,7 @@ disqus: true
 
 ### 开发类
 
-[最代码](http://www.zuidaima.com) &nbsp; &nbsp;  
-[安卓巴士](http://www.apkbus.com/)&nbsp; &nbsp; 
+[最代码](http://www.zuidaima.com) &nbsp; &nbsp;  [安卓巴士](http://www.apkbus.com/)&nbsp; &nbsp; 
 
 ---
 
