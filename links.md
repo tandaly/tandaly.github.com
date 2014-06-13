@@ -19,7 +19,8 @@ disqus: true
 
 ### 教程类
 
-[Git教程](http://lvwzhen.github.io/Git-Tutorial/)&nbsp; &nbsp;[gitbook使用入门](http://gitbook-zh.wanqingwong.com)&nbsp; &nbsp;[swift中文教程](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/)&nbsp; &nbsp;
+[Git教程](http://lvwzhen.github.io/Git-Tutorial/)&nbsp; &nbsp;[gitbook使用入门](http://gitbook-zh.wanqingwong.com)&nbsp; &nbsp;[swift中文教程](http://numbbbbb.github.io/the-swift-programming-language-in-chinese/)&nbsp; &nbsp;[Nginx](http://tengine.taobao.org/book/index.html)&nbsp; &nbsp;
+
 
 ### 生活类
 
