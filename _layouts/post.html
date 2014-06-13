@@ -11,8 +11,8 @@
       <div class="content">
         <section class='post'>
           <h1>
-            <div class='date'>{{ page.date | date:"%Y-%m-%d" }}</div>
             {{ page.title }}
+             <div class='date'>{{ page.date | date:"%Y-%m-%d" }}</div>
           </h1>
           {{ content }}
           {% include signoff.html %}
