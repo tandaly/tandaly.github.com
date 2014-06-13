@@ -4,9 +4,6 @@ title: 利用jsdoc生成javascript api文档
 date: 2014-06-13 12:24:28 
 ---
 
-#jsdoc 
----
-
 [英文版](https://github.com/jsdoc3/jsdoc)
 
 [编译版本](http://travis-ci.org/jsdoc3/jsdoc)
