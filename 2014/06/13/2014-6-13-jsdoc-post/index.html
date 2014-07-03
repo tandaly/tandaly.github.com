@@ -88,7 +88,7 @@ npm install jsdoc@&quot;">
     </p>
   <p class="article-time">
     <time datetime="2014-06-13T04:24:28.000Z" itemprop="datePublished">2014 06 13</time>
-    Updated:<time datetime="2014-06-28T16:09:08.000Z" itemprop="dateModified">2014 06 29</time>
+    Updated:<time datetime="2014-06-28T18:25:46.000Z" itemprop="dateModified">2014 06 29</time>
     
   </p>
 </header>
@@ -128,11 +128,8 @@ npm install jsdoc@&quot;">
 </pre></td><td class="code"><pre>jsdoc yourJavaScriptFile<span class="preprocessor">.js</span>
 </pre></td></tr></table></figure>
 
-<p>jsdoc默认输出文档文件的目录是out，你也可以通过<figure class="highlight --destination```或者(```-d```)参数命令指定其他输出目录"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre>
-运行
-</pre></td></tr></table></figure>jsdoc —help ```可以查看命令行参数清单</p>
+<p>jsdoc默认输出文档文件的目录是out，你也可以通过<strong><em>—destination</em></strong>或者(<strong><em>-d</em></strong>)参数命令指定其他输出目录</p>
+<p>运行<strong><em>jsdoc —help </em></strong>可以查看命令行参数清单</p>
 <hr>
 <p>译者：<a href="http://tandaly.github.com" target="_blank" rel="external">tandaly</a></p>
 <h3 id="参考">参考</h3>
@@ -233,7 +230,31 @@ npm install jsdoc@&quot;">
 		
 		</p>
 </div>
-</footer>
+
+<!--鼠标左键显示积分-->
+<script type="text/javascript">
+$("html,body").click(function(e){
+    anp(e);
+});
+
+function anp(e){
+    var n=Math.round(Math.random()*10);
+    var $i=$("<b>").html("<font size=28>♥</font>"); //"E94F06"
+    var x=e.pageX,y=e.pageY;
+    $i.css({top:y-20,left:x,position:"absolute",color:"#"+(Math.random()*0xfff<<0).toString(16)});
+    $("body").append($i);
+    $i.animate({top:y-400,opacity:0,"font-size":"24px"},1500,function(){
+        $i.remove();
+    });
+    e.stopPropagation();
+}
+</script>
+
+<!--百度统计-->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb5b71592574767d796a6f654023dbba6' type='text/javascript'%3E%3C/script%3E"));
+</script></footer>
     <script src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
