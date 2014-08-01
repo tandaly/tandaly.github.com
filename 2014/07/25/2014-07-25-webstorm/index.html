@@ -4,22 +4,12 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>利用jsdoc生成javascript api文档 | Tanf&#39;s Blog</title>
+    <title>webstorm | Tanf&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Tanf">
     
-    <meta name="description" content="英文版
-编译版本
-jsdoc是一个面向Javascript API文档生成器。
-安装与用法
-你可以在Node.js上安装运行jsdoc。
-Node.js
-首先你需要安装Node.js，不知道的上官网Node.js。
-利用Node.js安装jsdoc
-稳定版
-1
-npm install jsdoc@&quot;">
+    <meta name="description" content="WebStorm 是jetbrains公司旗下一款JavaScript 开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的JavaScript IDE”等。与IntelliJ IDEA同源，继承了IntelliJ IDEA强大的JS部分的功能。—-该引">
     
     
     
@@ -80,15 +70,15 @@ npm install jsdoc@&quot;">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/06/13/2014-6-13-jsdoc-post/" title="利用jsdoc生成javascript api文档" itemprop="url">利用jsdoc生成javascript api文档</a>
+      <a href="/2014/07/25/2014-07-25-webstorm/" title="webstorm" itemprop="url">webstorm</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://tandaly.github.com" title="Tanf">Tanf</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-06-13T04:24:28.000Z" itemprop="datePublished">2014 06 13</time>
-    Updated:<time datetime="2014-06-13T10:57:44.000Z" itemprop="dateModified">2014 06 13</time>
+    <time datetime="2014-07-25T00:00:00.000Z" itemprop="datePublished">2014 07 25</time>
+    Updated:<time datetime="2014-07-25T13:28:23.000Z" itemprop="dateModified">2014 07 25</time>
     
   </p>
 </header>
@@ -97,50 +87,23 @@ npm install jsdoc@&quot;">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装与用法"><span class="toc-number">1.</span> <span class="toc-text">安装与用法</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">Node.js</span></a></li><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#利用Node-js安装jsdoc"><span class="toc-number">1.1.1.</span> <span class="toc-text">利用Node.js安装jsdoc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Node-js上运行jsdoc"><span class="toc-number">1.1.2.</span> <span class="toc-text">在Node.js上运行jsdoc</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">1.2.</span> <span class="toc-text">参考</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#&#98632;常见问题及其解决方案"><span class="toc-number">1.</span> <span class="toc-text">&#98632;常见问题及其解决方案</span></a></li></ol>
 		</div>
 		
-		<p><a href="https://github.com/jsdoc3/jsdoc" target="_blank" rel="external">英文版</a></p>
-<p><a href="http://travis-ci.org/jsdoc3/jsdoc" target="_blank" rel="external">编译版本</a></p>
-<p>jsdoc是一个面向Javascript API文档生成器。</p>
-<h2 id="安装与用法">安装与用法</h2>
-<p>你可以在Node.js上安装运行jsdoc。</p>
-<h3 id="Node-js">Node.js</h3>
-<p>首先你需要安装Node.js，不知道的上官网<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>。</p>
-<h4 id="利用Node-js安装jsdoc">利用Node.js安装jsdoc</h4>
-<p><strong>稳定版</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>npm <span class="keyword">install</span> jsdoc@<span class="string">"&lt;=3.3.0"</span>
-</pre></td></tr></table></figure>
-
-<p><strong>开发版</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>npm install git+https://github<span class="preprocessor">.com</span>/jsdoc3/jsdoc<span class="preprocessor">.git</span>
-</pre></td></tr></table></figure>
-
-<h4 id="在Node-js上运行jsdoc">在Node.js上运行jsdoc</h4>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>./node_modules/<span class="preprocessor">.bin</span>/jsdoc yourJavaScriptFile<span class="preprocessor">.js</span>
-</pre></td></tr></table></figure>
-
-<p>如果你在环境变量path中配置了全局访问，那么就可以在命令行任意位置输入以下命令进行编译。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>jsdoc yourJavaScriptFile<span class="preprocessor">.js</span>
-</pre></td></tr></table></figure>
-
-<p>jsdoc默认输出文档文件的目录是out，你也可以通过<figure class="highlight --destination```或者(```-d```)参数命令指定其他输出目录"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre>
-运行
-</pre></td></tr></table></figure>jsdoc —help ```可以查看命令行参数清单</p>
-<hr>
-<p>译者：<a href="http://tandaly.github.com" target="_blank" rel="external">tandaly</a></p>
-<h3 id="参考">参考</h3>
-<blockquote>
-<ul>
-<li><a href="http://jianshu.io/p/6c49e2a0cebe" target="_blank" rel="external">JS文档生成工具：JSDoc 介绍</a></li>
-</ul>
+		<blockquote>
+<p><a href="http://www.jetbrains.com/webstorm/" target="_blank" rel="external">WebStorm</a> 是jetbrains公司旗下一款JavaScript 开发工具。被广大中国JS开发者誉为“Web前端开发神器”、“最强大的HTML5编辑器”、“最智能的JavaScript IDE”等。与IntelliJ IDEA同源，继承了IntelliJ IDEA强大的JS部分的功能。—-该引用摘抄自<a href="http://baike.baidu.com/view/5443872.htm?fr=aladdin" target="_blank" rel="external">百度百科</a></p>
 </blockquote>
+<hr>
+<h4 id="&#98632;常见问题及其解决方案">&#98632;常见问题及其解决方案</h4>
+<ul>
+<li><p>如何进行汉化？</p>
+<p>  答：在网上下载汉化包(<code>resources_en.jar</code>)，并替换掉<code>根目录/lib/resources_en.jar</code>即可。</p>
+</li>
+<li><p>如何设置字体?</p>
+<p>  答：<code>File--&gt;Settings--&gt;Editor--&gt;Color &amp; Fonts--&gt;Font</code>  如果你发现你不能更改字体的大小或者其它配置，那是因为系统的主题配置是不能进行修改的。那怎么样才能设置自己想要的配置呐，那么就需要你点击<code>Save As</code>另存为一个配置，这样你就可以在你自己的主题配置里进行修改操作了。</p>
+</li>
+</ul>
+<p>Created by <a href="http://tandaly.github.io" target="_blank" rel="external">Tandaly</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -150,7 +113,7 @@ npm install jsdoc@&quot;">
 
 <div class="article-share" id="share">
 
-  <div data-url="http://tandaly.github.com/2014/06/13/2014-6-13-jsdoc-post/" data-title="利用jsdoc生成javascript api文档 | Tanf&#39;s Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://tandaly.github.com/2014/07/25/2014-07-25-webstorm/" data-title="webstorm | Tanf&#39;s Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -160,18 +123,18 @@ npm install jsdoc@&quot;">
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/06/13/2014-6-13-nginx/" title="在window下搭建nginx">
+ <a href="/2014/07/28/2014-07-09-ngsis/" title="南钢项目指标报表部署手册">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  在window下搭建nginx</span>
+  南钢项目指标报表部署手册</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2013/12/08/2013-12-08-markdown-pandoc/"  title="Markdown+Pandoc 最佳写作拍档">
+<a href="/2014/07/13/2014-07-13-remark/"  title="remark">
  <strong>NEXT:</strong><br/> 
- <span>Markdown+Pandoc 最佳写作拍档
+ <span>remark
 </span>
 </a>
 </div>
@@ -188,7 +151,7 @@ npm install jsdoc@&quot;">
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装与用法"><span class="toc-number">1.</span> <span class="toc-text">安装与用法</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">Node.js</span></a></li><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#利用Node-js安装jsdoc"><span class="toc-number">1.1.1.</span> <span class="toc-text">利用Node.js安装jsdoc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Node-js上运行jsdoc"><span class="toc-number">1.1.2.</span> <span class="toc-text">在Node.js上运行jsdoc</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">1.2.</span> <span class="toc-text">参考</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#&#98632;常见问题及其解决方案"><span class="toc-number">1.</span> <span class="toc-text">&#98632;常见问题及其解决方案</span></a></li></ol>
   </div>
 
 <div id="asidepart">

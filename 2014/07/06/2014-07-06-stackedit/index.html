@@ -4,22 +4,17 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>利用jsdoc生成javascript api文档 | Tanf&#39;s Blog</title>
+    <title>在线stackedit | Tanf&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Tanf">
     
-    <meta name="description" content="英文版
-编译版本
-jsdoc是一个面向Javascript API文档生成器。
-安装与用法
-你可以在Node.js上安装运行jsdoc。
-Node.js
-首先你需要安装Node.js，不知道的上官网Node.js。
-利用Node.js安装jsdoc
-稳定版
-1
-npm install jsdoc@&quot;">
+    <meta name="description" content="这款在线markdown编辑器，是一款很赞的应用。如果你是markdown的用户，那么你要试一下这款应用；如果你是chrome用户，那么你更要安装这款应用。我是把它作为chrome的一个插件应用来使用的。下面来看一下这款应用的特点及使用技巧。
+
+功能介绍
+
+
+离线编辑 当你正在编辑一个文档时，突然断">
     
     
     
@@ -80,15 +75,15 @@ npm install jsdoc@&quot;">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/06/13/2014-6-13-jsdoc-post/" title="利用jsdoc生成javascript api文档" itemprop="url">利用jsdoc生成javascript api文档</a>
+      <a href="/2014/07/06/2014-07-06-stackedit/" title="在线stackedit" itemprop="url">在线stackedit</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://tandaly.github.com" title="Tanf">Tanf</a>
     </p>
   <p class="article-time">
-    <time datetime="2014-06-13T04:24:28.000Z" itemprop="datePublished">2014 06 13</time>
-    Updated:<time datetime="2014-06-13T10:57:44.000Z" itemprop="dateModified">2014 06 13</time>
+    <time datetime="2014-07-06T09:32:10.000Z" itemprop="datePublished">2014 07 06</time>
+    Updated:<time datetime="2014-07-09T06:06:11.000Z" itemprop="dateModified">2014 07 09</time>
     
   </p>
 </header>
@@ -97,50 +92,45 @@ npm install jsdoc@&quot;">
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装与用法"><span class="toc-number">1.</span> <span class="toc-text">安装与用法</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">Node.js</span></a></li><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#利用Node-js安装jsdoc"><span class="toc-number">1.1.1.</span> <span class="toc-text">利用Node.js安装jsdoc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Node-js上运行jsdoc"><span class="toc-number">1.1.2.</span> <span class="toc-text">在Node.js上运行jsdoc</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">1.2.</span> <span class="toc-text">参考</span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#功能介绍"><span class="toc-number">1.</span> <span class="toc-text">功能介绍</strong></span></a></li></ol></ol></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-number"></span> <span class="toc-text">目录</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章"><span class="toc-number"></span> <span class="toc-text">第一章</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1节"><span class="toc-number"></span> <span class="toc-text">第1节</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章"><span class="toc-number"></span> <span class="toc-text">第二章</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1节-1"><span class="toc-number"></span> <span class="toc-text">第1节</span></a></li></ol>
 		</div>
 		
-		<p><a href="https://github.com/jsdoc3/jsdoc" target="_blank" rel="external">英文版</a></p>
-<p><a href="http://travis-ci.org/jsdoc3/jsdoc" target="_blank" rel="external">编译版本</a></p>
-<p>jsdoc是一个面向Javascript API文档生成器。</p>
-<h2 id="安装与用法">安装与用法</h2>
-<p>你可以在Node.js上安装运行jsdoc。</p>
-<h3 id="Node-js">Node.js</h3>
-<p>首先你需要安装Node.js，不知道的上官网<a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a>。</p>
-<h4 id="利用Node-js安装jsdoc">利用Node.js安装jsdoc</h4>
-<p><strong>稳定版</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>npm <span class="keyword">install</span> jsdoc@<span class="string">"&lt;=3.3.0"</span>
-</pre></td></tr></table></figure>
-
-<p><strong>开发版</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>npm install git+https://github<span class="preprocessor">.com</span>/jsdoc3/jsdoc<span class="preprocessor">.git</span>
-</pre></td></tr></table></figure>
-
-<h4 id="在Node-js上运行jsdoc">在Node.js上运行jsdoc</h4>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>./node_modules/<span class="preprocessor">.bin</span>/jsdoc yourJavaScriptFile<span class="preprocessor">.js</span>
-</pre></td></tr></table></figure>
-
-<p>如果你在环境变量path中配置了全局访问，那么就可以在命令行任意位置输入以下命令进行编译。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>jsdoc yourJavaScriptFile<span class="preprocessor">.js</span>
-</pre></td></tr></table></figure>
-
-<p>jsdoc默认输出文档文件的目录是out，你也可以通过<figure class="highlight --destination```或者(```-d```)参数命令指定其他输出目录"><table><tr><td class="gutter"><pre>1
-2
-</pre></td><td class="code"><pre>
-运行
-</pre></td></tr></table></figure>jsdoc —help ```可以查看命令行参数清单</p>
-<hr>
-<p>译者：<a href="http://tandaly.github.com" target="_blank" rel="external">tandaly</a></p>
-<h3 id="参考">参考</h3>
+		<blockquote>
+<p>这款在线markdown编辑器，是一款很赞的应用。如果你是markdown的用户，那么你要试一下这款应用；如果你是chrome用户，那么你更要安装这款应用。我是把它作为chrome的一个插件应用来使用的。下面来看一下这款应用的特点及使用技巧。</p>
+</blockquote>
+<h4 id="功能介绍"><strong>功能介绍</strong></h4>
 <blockquote>
 <ul>
-<li><a href="http://jianshu.io/p/6c49e2a0cebe" target="_blank" rel="external">JS文档生成工具：JSDoc 介绍</a></li>
+<li><p><strong>离线编辑</strong> 当你正在编辑一个文档时，突然断网了，没关系，你可以继续进行编写，因为stackedit能实时本地存储，不用担心断网导致数据丢失问题。</p>
+</li>
+<li><p><strong>同步github</strong> 能把编辑的文件同步到github上面，只需要绑定github，并设置文件在github中的路径即可。</p>
+</li>
+<li><p><strong>随身行</strong> 比如在公司使用后，回到家后想继续工作，只需要导出StackEdit local storage.json ，回到家后打开网站导入StackEdit local storage.json 即可。具体导入导出操作在Menu-&gt;Settings-&gt;Utils下。</p>
+</li>
 </ul>
 </blockquote>
+<p>在字里行间插入代码片段<code>var a = 0</code>，怎么样，还可以吧。</p>
+<p>下面是单独的代码片段：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="keyword">var</span> a = <span class="number">0</span>;
+a += <span class="number">3</span>;
+document.write(a);
+</pre></td></tr></table></figure>
+
+
+
+<h1 id="目录">目录</h1>
+<h2 id="第一章">第一章</h2>
+<p>是地方撒地方</p>
+<h3 id="第1节">第1节</h3>
+<p>是地方撒地方</p>
+<h2 id="第二章">第二章</h2>
+<h3 id="第1节-1">第1节</h3>
+<p>梵<code>蒂</code>冈</p>
+<p><img src="https://raw.githubusercontent.com/tandaly/res/master/img/powerdesigner01.jpg" alt="" title="去掉PowerDesigner中生成sql的双引号"> </p>
+<p>作者：<a href="http://tandaly.github.com" target="_blank" rel="external">tandaly</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -150,7 +140,7 @@ npm install jsdoc@&quot;">
 
 <div class="article-share" id="share">
 
-  <div data-url="http://tandaly.github.com/2014/06/13/2014-6-13-jsdoc-post/" data-title="利用jsdoc生成javascript api文档 | Tanf&#39;s Blog" data-tsina="null" class="share clearfix">
+  <div data-url="http://tandaly.github.com/2014/07/06/2014-07-06-stackedit/" data-title="在线stackedit | Tanf&#39;s Blog" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -160,18 +150,18 @@ npm install jsdoc@&quot;">
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/06/13/2014-6-13-nginx/" title="在window下搭建nginx">
+ <a href="/2014/07/07/2014-07-07-heroku/" title="heroku">
   <strong>PREVIOUS:</strong><br/>
   <span>
-  在window下搭建nginx</span>
+  heroku</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2013/12/08/2013-12-08-markdown-pandoc/"  title="Markdown+Pandoc 最佳写作拍档">
+<a href="/2014/06/29/2014-6-12-jekyll-post/"  title="利用GitHub Pages和Jekyll搭建个人主页">
  <strong>NEXT:</strong><br/> 
- <span>Markdown+Pandoc 最佳写作拍档
+ <span>利用GitHub Pages和Jekyll搭建个人主页
 </span>
 </a>
 </div>
@@ -188,7 +178,7 @@ npm install jsdoc@&quot;">
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装与用法"><span class="toc-number">1.</span> <span class="toc-text">安装与用法</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">Node.js</span></a></li><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#利用Node-js安装jsdoc"><span class="toc-number">1.1.1.</span> <span class="toc-text">利用Node.js安装jsdoc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Node-js上运行jsdoc"><span class="toc-number">1.1.2.</span> <span class="toc-text">在Node.js上运行jsdoc</span></a></li></ol><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">1.2.</span> <span class="toc-text">参考</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#功能介绍"><span class="toc-number">1.</span> <span class="toc-text">功能介绍</strong></span></a></li></ol></ol></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#目录"><span class="toc-number"></span> <span class="toc-text">目录</span></a></li><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一章"><span class="toc-number"></span> <span class="toc-text">第一章</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1节"><span class="toc-number"></span> <span class="toc-text">第1节</span></a></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#第二章"><span class="toc-number"></span> <span class="toc-text">第二章</span></a></li><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#第1节-1"><span class="toc-number"></span> <span class="toc-text">第1节</span></a></li></ol>
   </div>
 
 <div id="asidepart">

@@ -1,0 +1,440 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>南钢项目指标报表部署手册 | Tanf&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Tanf">
+    
+    <meta name="description" content="南钢项目指标报表部署手册
+[TOC]
+
+一、项目说明
+
+ 该指标报表功能是由华能项目指标模块迁移过来，根据需求进行相关的改进。目前报表只实现了后台功能，增加了sis实时数据库取数报表功能。由于没有实现前端界面，需要项目部署人员进行手动配置部署相关文件。生成报表策略是根据报表模板表sis_report">
+    
+    
+    
+    
+    <link rel="alternative" href="http://tandaly.github.com/blog/feed.xml## RSS address." title="Tanf&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/author.jpg">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Tanf&#39;s Blog" title="Tanf&#39;s Blog"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Tanf&#39;s Blog">Tanf&#39;s Blog</a></h1>
+				<h2 class="blog-motto">当你的才华还撑不起你的野心时，你就应该静下心来学习。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">目录</a></li>
+					
+						<li><a href="/blog">我的小屋</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:tandaly.github.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/07/28/2014-07-09-ngsis/" title="南钢项目指标报表部署手册" itemprop="url">南钢项目指标报表部署手册</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://tandaly.github.com" title="Tanf">Tanf</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2014-07-28T00:00:00.000Z" itemprop="datePublished">2014 07 28</time>
+    Updated:<time datetime="2014-08-01T13:25:21.000Z" itemprop="dateModified">2014 08 01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#南钢项目指标报表部署手册"><span class="toc-number">1.</span> <span class="toc-text">南钢项目指标报表部署手册</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一、项目说明"><span class="toc-number">2.</span> <span class="toc-text">一、项目说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、数据库数据初始化"><span class="toc-number">3.</span> <span class="toc-text">二、数据库数据初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、更新项目代码"><span class="toc-number">4.</span> <span class="toc-text">三、更新项目代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、_操作步骤"><span class="toc-number">5.</span> <span class="toc-text">四、 操作步骤</span></a></li></ol>
+		</div>
+		
+		<h4 id="南钢项目指标报表部署手册">南钢项目指标报表部署手册</h4>
+<p>[TOC]</p>
+<hr>
+<h4 id="一、项目说明">一、项目说明</h4>
+<blockquote>
+<p> 该指标报表功能是由华能项目指标模块迁移过来，根据需求进行相关的改进。目前报表只实现了后台功能，增加了sis实时数据库取数报表功能。由于没有实现前端界面，需要项目部署人员进行手动配置部署相关文件。生成报表策略是根据报表模板表<code>sis_report_model</code>的配置定期生成的。</p>
+</blockquote>
+<p><strong>项目导图</strong></p>
+<p><img src="https://raw.githubusercontent.com/tandaly/res/master/img/ngsis01.png" width="100%"><br><strong>♥友情提示</strong><br>如觉得图片太小或者看不清，请把页面打开进行查看，或下载原图(<a href="https://raw.githubusercontent.com/tandaly/res/master/img/ngsis01.png" target="_blank" rel="external">https://raw.githubusercontent.com/tandaly/res/master/img/ngsis01.png</a>)。  </p>
+<h4 id="二、数据库数据初始化">二、数据库数据初始化</h4>
+<p>报表功能涉及的表和视图，列出如下：</p>
+<p><em>表</em></p>
+<ul>
+<li>bm_time (时间配置表)  </li>
+<li>bm_object (指标对象表)</li>
+<li>bm_indicator (指标表)</li>
+<li>bm_indicator_data (指标数据表)</li>
+<li>bm_plan_data (标计划数据表)</li>
+<li>sis_report_model (报表模板表)</li>
+<li>bm_report (报表浏览表)</li>
+</ul>
+<p><em>视图</em></p>
+<ul>
+<li>bm_v_object (指标对象视图)</li>
+<li>v_view_report_tree (报表浏览目录树视图)</li>
+</ul>
+<p>&#9829;以上数据库脚本文件请在公司项目svn服务器<code>/svn/ngsis/Development/05Database/sql/bm/</code>下自行下载，并导入到数据库中。</p>
+<h4 id="三、更新项目代码">三、更新项目代码</h4>
+<p>指标相关代码已提交至南钢项目svn服务器，更新下来即可。</p>
+<h4 id="四、_操作步骤">四、 操作步骤</h4>
+<blockquote>
+<p><strong>操作前须知</strong></p>
+<ul>
+<li>所有涉及Excel的文件必须是xls后缀且是97-2003版本文件，如你的电脑安装的是2007以上版本的office Excel，那么你就需要另存为<code>Excel 97-2003 工作薄</code>，格式为xls的文件。必须要通过客户端另存，不能直接修改后缀名，这样会无效的。</li>
+<li>模板文件名称必须和模板表对应记录的模板编码必须一致。如记录的模板编码为<code>RP100</code>所对应的模板文件为<code>RP100.xls</code></li>
+</ul>
+</blockquote>
+<ol>
+<li><p><strong>配置EXCEL模板代码文件</strong><br> 手动配置excel报表代码模块，并将模板文件(文件名必须和模板编码一致，如RP100.xls)放置代码模板文件目录<code>/upload/bm/view/change</code>下</p>
+<p> 【表达式相关说明】<br> <strong>完整的取值代码表达式</strong>：</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>	<span class="variable">${SisData.getHisData(时间代码表达式,实时测点名称,取值方式)}</span>
+</pre></td></tr></table></figure>
+
+<p> <strong>参数1：时间代码表达式</strong> </p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>	bmTime.getPreMonthDay(<span class="number">26</span>) <span class="comment">//上月26日</span>
+	bmTime.getMonthDay(<span class="number">1</span>) <span class="comment">//本月1日</span>
+	bmTime.getPreDayHour(<span class="number">2</span>) <span class="comment">//前一天的2点钟</span>
+	bmTime.getDayHour(<span class="number">2</span>) <span class="comment">//当天2点钟</span>
+	bmTime.getPreDayMultHour(<span class="number">3</span>,<span class="number">2</span>) <span class="comment">//前一天的第3个2小时区间，即前一天的4~6点</span>
+	bmTime.getDayMulHour(<span class="number">4</span>,<span class="number">2</span>) <span class="comment">//当天的第4个2小时区间，即当天的6~8点</span>
+</pre></td></tr></table></figure>
+
+<p> <strong>参数2：实时测点名称</strong> </p>
+<p> 实时数据库测点名称</p>
+<p> <strong>参数3：取值方式</strong> </p>
+<pre><code> <span class="escape">`E</span>ND<span class="escape">`：</span>期末值
+ <span class="escape">`P</span>ERIOD<span class="escape">`：</span>期间值
+ <span class="escape">`S</span>UMMARY<span class="escape">`：</span>累计值
+ <span class="escape">`A</span>VG<span class="escape">`：</span>平均值
+</code></pre></li>
+</ol>
+<pre><code><span class="subst">&amp;</span><span class="variable">#9828</span>;案例
+
+获取上月<span class="number">26</span>号实时测点为TEST的平均值 
+
+<span class="subst">&lt;</span>hexoescape<span class="subst">&gt;</span><span class="number">2</span><span class="subst">&lt;</span>/hexoescape<span class="subst">&gt;</span>
+
+<span class="subst">&amp;</span><span class="variable">#9829</span>;可以参考预留的模板文件<span class="string">`/upload/bm/view/change/RP100.xls`</span>
+</code></pre><ol>
+<li><p><strong>配置数据库报表模板表</strong><br>在报表模板表<code>sis_report_model</code>中配置相关指标模板数据<br><em>记录配置明细</em>：</p>
+<ul>
+<li><strong>GUID</strong>：表主键，只要保证唯一即可</li>
+<li><strong>MODEL_CODE</strong>：模板编码，请以RP开头，该编码必须唯一，因为该编码是模板文件的唯一标识。</li>
+<li><strong>MODEL_NAME</strong>：模板名称</li>
+<li><strong>TIME_CLASS_CODE</strong>：时间类型编码<code>DA、MO</code></li>
+<li><strong>TIME_CLASS_NAME</strong>：时间类型名称<code>日、月</code></li>
+<li><strong>PATH</strong>：浏览模板文件路径</li>
+<li><strong>PATH_</strong>：浏览模板代码文件路径</li>
+<li><strong>MODEL_TYPE</strong>：模板类型(<code>0：填报 1：浏览</code>)</li>
+<li><strong>ISAUTOPUBLISH</strong>：是否自动生成 <code>0：不是 1：是</code></li>
+<li><strong>PUBLISH_PERIOD</strong>：生成周期 <code>h:按小时 d:按天 m:按月</code></li>
+</ul>
+<p>&#9829;可以参考表中预留的数据<code>RP100</code></p>
+</li>
+</ol>
+<ol>
+<li><strong>部署测试</strong><br> 启动服务器，在启动的期间，系统会自动根据模板表的配置自动生成报表，报表文件生成后存放的路径<code>/upload/bm/view/result/</code> </li>
+</ol>
+<hr>
+<p> create by <a href="">Tanf</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://tandaly.github.com/2014/07/28/2014-07-09-ngsis/" data-title="南钢项目指标报表部署手册 | Tanf&#39;s Blog" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/08/01/2014-08-01-fivestar/" title="五星红旗SVG">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  五星红旗SVG</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/07/25/2014-07-25-webstorm/"  title="webstorm">
+ <strong>NEXT:</strong><br/> 
+ <span>webstorm
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section class="comment">
+	<div class="ds-thread"></div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#南钢项目指标报表部署手册"><span class="toc-number">1.</span> <span class="toc-text">南钢项目指标报表部署手册</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#一、项目说明"><span class="toc-number">2.</span> <span class="toc-text">一、项目说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二、数据库数据初始化"><span class="toc-number">3.</span> <span class="toc-text">二、数据库数据初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、更新项目代码"><span class="toc-number">4.</span> <span class="toc-text">三、更新项目代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、_操作步骤"><span class="toc-number">5.</span> <span class="toc-text">四、 操作步骤</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+  
+
+  <div class="rsspart">
+	<a href="http://tandaly.github.com/blog/feed.xml## RSS address." target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello, I am Tanf in NanJing <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://zespia.tw/hexo/" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2014 
+		
+		<a href="http://tandaly.github.com" target="_blank" title="Tanf">Tanf</a>
+		
+		</p>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.6.2/jquery.min.js"></script>
+<!--鼠标左键显示积分-->
+<script type="text/javascript">
+$("html,body").click(function(e){
+    anp(e);
+});
+
+function anp(e){
+    var n=Math.round(Math.random()*10);
+    var $i=$("<b>").html("<font size=28>♥</font>"); //"E94F06"
+    var x=e.pageX,y=e.pageY;
+    $i.css({top:y-20,left:x,position:"absolute",color:"#"+(Math.random()*0xfff<<0).toString(16)});
+    $("body").append($i);
+    $i.animate({top:y-400,opacity:0,"font-size":"24px"},1500,function(){
+        $i.remove();
+    });
+    e.stopPropagation();
+}
+</script>
+
+<!--百度统计-->
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb5b71592574767d796a6f654023dbba6' type='text/javascript'%3E%3C/script%3E"));
+</script></footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"null"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+  </body>
+</html>
